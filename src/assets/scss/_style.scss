@@ -249,7 +249,7 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .workCulture {
   font-weight: 600;
-  background: -webkit-linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
+  background: -webkit-linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -258,12 +258,7 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .teamHeading {
   font-weight: 600;
-  background: -webkit-linear-gradient(
-    319deg,
-    #fde74c 0%,
-    #32ff7a 37%,
-    #2fcbe0 100%
-  );
+  background: -webkit-linear-gradient(315deg, #fefefe 0%, #00a4e4 74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -272,4 +267,25 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .lead {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-dark {
+  background: linear-gradient(180deg, #000000 0%, #010111 75%);
+  color: #ffffff;
+}
+
+.team-1 {
+  h3 {
+    color: white;
+    small {
+      background: -webkit-linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  p {
+    color: #ffffffbd;
+  }
 }
