@@ -1,5 +1,239 @@
-
 // Write your custom style. Feel free to split your code to several files
+@mixin lhCrop($line-height) {
+  &::before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+}
+
 body {
-  //color: blue;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+
+.navbar-stick-dark {
+  background-color: #000000 !important;
+}
+.navbar-stick-light {
+  background-color: #000000 !important;
+}
+
+$accent-color: rgb(72, 112, 255);
+$accent-color-hover: rgb(51, 0, 255);
+
+.btn-accent {
+  color: #000000 !important;
+  background: $accent-color;
+  background: linear-gradient(
+    45deg,
+    rgba(72, 112, 255, 1) 0%,
+    rgba(12, 152, 196, 1) 50%,
+    rgba(51, 0, 255, 1) 100%
+  );
+  border-color: $accent-color;
+  border-radius: 4px;
+  font-weight: 700;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  &:hover {
+    color: #ffffff;
+    background: rgb(51, 0, 255);
+    background: radial-gradient(
+      circle,
+      rgb(0, 60, 255) 0%,
+      rgba(12, 152, 196, 1) 100%
+    );
+    border-color: #ffffff;
+    box-shadow: 0 1px 10px rgba(80, 161, 255, 0.4);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  &:focus,
+  &.focus {
+    color: var(--bg-white);
+    box-shadow: 0 0 0 0rem rgba(80, 161, 255, 0.5);
+  }
+}
+
+.btn-outline-accent {
+  border-color: $accent-color;
+  border-radius: 4px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  span {
+    // background: -webkit-linear-gradient(
+    //   45deg,
+    //   rgba(72, 112, 255, 1) 0%,
+    //   rgba(12, 152, 196, 1) 50%,
+    //   rgba(51, 0, 255, 1) 100%
+    // );
+    background: #ffffff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+  border-color: $accent-color;
+  &:focus,
+  &.focus {
+    color: $accent-color !important;
+    box-shadow: 0 0 0 0rem rgba(80, 161, 255, 0.5);
+  }
+  &:hover {
+    span {
+      background: #000000;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    background: rgb(51, 0, 255);
+    background: radial-gradient(
+      circle,
+      rgb(0, 60, 255) 0%,
+      rgba(12, 152, 196, 1) 100%
+    );
+    border-color: #ffffff;
+    box-shadow: 0 1px 10px rgba(80, 161, 255, 0.4);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container {
+    max-width: 1640px;
+  }
+  .landing-padfix {
+    padding-top: 250px !important;
+  }
+  .test-mtfix {
+    margin-top: 75px !important;
+  }
+  // $font-size-base:18px;
+  .d-xxl-none {
+    display: none !important;
+  }
+  .d-xxl-inline {
+    display: inline !important;
+  }
+  .d-xxl-inline-block {
+    display: inline-block !important;
+  }
+  .d-xxl-block {
+    display: block !important;
+  }
+  .d-xxl-table {
+    display: table !important;
+  }
+  .d-xxl-table-row {
+    display: table-row !important;
+  }
+  .d-xxl-table-cell {
+    display: table-cell !important;
+  }
+  .d-xxl-flex {
+    display: flex !important;
+  }
+  .d-xxl-inline-flex {
+    display: inline-flex !important;
+  }
+  .col-xxl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+@media (min-width: 2800px) {
+  .container {
+    max-width: 2720px;
+  }
+}
+@media (min-width: 3500px) {
+  .container {
+    max-width: 3400px;
+  }
+}
+
+.header {
+  padding: 0;
+  background-color: #000000;
+  overflow: hidden;
+  .watermarkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .watermark {
+      font-size: 50rem;
+      @include lhCrop(1);
+      line-height: 1;
+      background: -webkit-linear-gradient(45deg, #585858 0%, #000000 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @media (min-width: 1500px) {
+        font-size: 70rem;
+      }
+      opacity: 0.4;
+    }
+  }
+}
+
+.navbar-brand {
+  width: 5rem;
+  height: 5rem;
+  img {
+    width: 100% !important;
+    max-height: 100% !important;
+  }
+}
+
+.backdrop-navbar {
+  background-color: #000000b6;
+}
+
+.navbar-mobile {
+  background-color: #000000 !important;
+  border-right: 1px solid #ffffff18;
+  .nav-link {
+    color: rgba(255, 255, 255, 0.65) !important;
+  }
+}
+
+.big-heading {
+  font-size: 2.8125rem;
+  font-weight: 600;
+  @media (min-width: 1500px) {
+    font-size: 4.5rem;
+  }
+}
+
+.endScroll {
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.illustration-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
