@@ -237,3 +237,39 @@ $accent-color-hover: rgb(51, 0, 255);
   align-items: center;
   justify-content: center;
 }
+
+.ourMission {
+  font-weight: 600;
+  background: -webkit-linear-gradient(45deg, #ff0606 0%, #ffdd00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.workCulture {
+  font-weight: 600;
+  background: -webkit-linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.teamHeading {
+  font-weight: 600;
+  background: -webkit-linear-gradient(
+    319deg,
+    #fde74c 0%,
+    #32ff7a 37%,
+    #2fcbe0 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.lead {
+  color: rgba(255, 255, 255, 0.7);
+}
