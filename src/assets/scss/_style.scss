@@ -164,7 +164,6 @@ $accent-color-hover: rgb(51, 0, 255);
 .header {
   padding: 0;
   background-color: #000000;
-  overflow: hidden;
   .watermarkContainer {
     display: flex;
     justify-content: center;
@@ -205,8 +204,8 @@ $accent-color-hover: rgb(51, 0, 255);
 }
 
 .navbar-mobile {
-  background-color: #000000 !important;
-  border-right: 1px solid #ffffff18;
+  // background-color: #000000 !important;
+  // border-right: 1px solid #ffffff18;
   .nav-link {
     color: rgba(255, 255, 255, 0.65) !important;
   }
@@ -287,5 +286,101 @@ $accent-color-hover: rgb(51, 0, 255);
   }
   p {
     color: #ffffffbd;
+  }
+}
+
+.venture-header {
+  height: 70vh;
+  background-image: url(../img/ventures.png);
+  background-size: cover;
+}
+
+.transparent-navbar {
+  background-color: transparent !important;
+  .navbar-mobile {
+    background-color: transparent !important;
+  }
+}
+
+[data-scrim-bottom] {
+  &::before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, #000000 100%);
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-weight: 600;
+      font-size: 6rem;
+      box-shadow: 0 0px 15px rgba($color: #000000, $alpha: 0.15);
+      @media (max-width: 768px) {
+        font-size: 3.5rem;
+      }
+      @media (min-width: 1500px) {
+        font-size: 9rem;
+      }
+    }
+  }
+}
+
+section {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.px-44 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  .card {
+    background-color: #121212 !important;
+    border-radius: 4px;
+    h4 {
+      background: -webkit-linear-gradient(-135deg, #90d5ec 0%, #fc575e 74%);
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
+    p {
+      color: rgba($color: #ffffff, $alpha: 0.5);
+    }
+  }
+}
+
+.ongoingProjects {
+  font-weight: 600;
+  background: -webkit-linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.completedProjects {
+  font-weight: 600;
+  background: -webkit-linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.card {
+  background-color: #121212 !important;
+  border-radius: 4px;
+  h4 {
+    background: -webkit-linear-gradient(-135deg, #90d5ec 0%, #fc575e 74%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+  }
+  p {
+    color: rgba($color: #ffffff, $alpha: 0.5);
   }
 }
