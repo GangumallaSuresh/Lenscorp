@@ -264,6 +264,61 @@ $accent-color-hover: rgb(51, 0, 255);
   font-size: 2.5rem;
 }
 
+.ongoingProjects {
+  font-weight: 600;
+  background: -webkit-linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.completedProjects {
+  font-weight: 600;
+  background: -webkit-linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.contactUs {
+  font-weight: 600;
+  background: -webkit-linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.qoe {
+  font-weight: 600;
+  background: -webkit-linear-gradient(45deg, #ff0606 0%, #ffdd00 100%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  // font-size: 2.5rem;
+}
+
+.okemos {
+  font-weight: 600;
+  background: -webkit-linear-gradient(315deg, #b8d3fe 0%, #aecad6 74%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.address {
+  p {
+    color: #ffffffad;
+  }
+}
+
 .lead {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -292,6 +347,12 @@ $accent-color-hover: rgb(51, 0, 255);
 .venture-header {
   height: 70vh;
   background-image: url(../img/ventures.png);
+  background-size: cover;
+}
+
+.connect-header {
+  height: 70vh;
+  background-image: url(../img/contact.png);
   background-size: cover;
 }
 
@@ -333,7 +394,7 @@ section {
   padding-left: 4rem;
   padding-right: 4rem;
   .card {
-    background-color: #121212 !important;
+    background-color: #121218 !important;
     border-radius: 4px;
     h4 {
       background: -webkit-linear-gradient(-135deg, #90d5ec 0%, #fc575e 74%);
@@ -349,28 +410,8 @@ section {
   }
 }
 
-.ongoingProjects {
-  font-weight: 600;
-  background: -webkit-linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
-
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2.5rem;
-}
-
-.completedProjects {
-  font-weight: 600;
-  background: -webkit-linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
-
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2.5rem;
-}
-
 .card {
-  background-color: #121212 !important;
+  background-color: #121218 !important;
   border-radius: 4px;
   h4 {
     background: -webkit-linear-gradient(-135deg, #90d5ec 0%, #fc575e 74%);
@@ -382,5 +423,95 @@ section {
   }
   p {
     color: rgba($color: #ffffff, $alpha: 0.5);
+  }
+}
+
+.btn-linkedin {
+  color: #fff;
+  background-color: #2867b2;
+  border-color: #2867b2;
+}
+.btn-linkedin:hover {
+  color: #fff;
+  background-color: #2167b2;
+  border-color: #2167b2;
+  box-shadow: 0 1px 10px #2167b269;
+}
+.btn-linkedin:focus,
+.btn-linkedin.focus {
+  color: #fff;
+  box-shadow: 0 0 0 0rem #2167b280;
+}
+.btn-linkedin.disabled,
+.btn-linkedin:disabled {
+  background-color: #2867b2;
+  border-color: #2867b2;
+}
+.btn-linkedin:not([disabled]):not(.disabled):active,
+.btn-linkedin:not([disabled]):not(.disabled).active,
+.show > .btn-linkedin.dropdown-toggle {
+  color: #fff;
+  background-color: #2167b2;
+  border-color: #2167b2;
+  box-shadow: 0 0 0 0rem #2167b280;
+}
+
+.form-group {
+  label {
+    color: #ffffff80;
+  }
+}
+
+.form-control,
+.input-group,
+.input-group-text,
+.input-group .btn {
+  border-radius: 4px;
+  border: 1px solid #ffffff80;
+  background-color: transparent;
+  color: #ffffffcc !important;
+  &:focus,
+  &:active {
+    background-color: #02020e;
+  }
+}
+
+.form-control {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+textarea {
+  border-radius: 4px;
+  color: #ffffffcc !important;
+}
+
+.input-group-text {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  opacity: 0.8;
+
+  + .form-control {
+    padding-left: 0;
+  }
+}
+
+.form-control-lg,
+.input-group-lg .form-control {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.social-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  .social-button {
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }
