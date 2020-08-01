@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
   </head>
 
-  <body>
+  <body class="dark">
 
 
     <!-- Navbar -->
@@ -56,9 +56,17 @@
             <a class="btn btn-sm btn-accent d-none d-lg-block"
               href="connect.html">Connect</a>
           </div>
+          <a class="nav-link my-auto theme-switcher" href="#">
+            <img src="assets/img/sun.svg" class="navbar-sun-light" alt="sun"
+              height="28px" width="28px" />
+          </a>
         </section>
 
-        <a class="btn btn-sm btn-accent d-lg-none" href="connect.html">Connect</a>
+        <a class="btn btn-sm btn-accent ml-auto d-lg-none" href="connect.html">Connect</a>
+        <a class="nav-link my-auto d-lg-none theme-switcher" href="#">
+          <img src="assets/img/sun.svg" class="navbar-sun-light" alt="sun"
+            height="28px" width="28px" />
+        </a>
       </div>
     </nav><!-- /.navbar -->
 
@@ -67,7 +75,7 @@
     <header class="header text-white mh-100vh py-3 d-flex align-items-center
       justify-content-center">
       <div class="watermarkContainer">
-        <h1 class="watermark">AI</h1>
+        <h1 class="watermark d-lg-none">AI</h1>
       </div>
       <div class="container">
         <div class="row">
@@ -272,6 +280,41 @@
 
     <!-- Scripts -->
     <script src="assets/js/page.min.js"></script>
+    <script>
+      var t = localStorage.getItem("theme") || 0;
+      themeSwitcher();
+      $(".theme-switcher").click(function () {
+        if (t == 1) {
+          t = 0;
+          localStorage.setItem("theme", 0);
+        } else {
+          t = 1;
+          localStorage.setItem("theme", 1);
+        }
+        themeSwitcher();
+      });
+      console.clear();
+      console.log(t);
 
+      function themeSwitcher() {
+        if (t == 1) {
+          $("body").addClass("dark").removeClass("light");
+          $(".navbar-sun-light").attr("src", "assets/img/moon.svg");
+          $(".logo-dark").attr("src", "assets/img/logo-light.png");
+          $(".logo-light").attr("src", "assets/img/logo-dark.png");
+          t = 1;
+          localStorage.setItem("theme", 1);
+          console.log(t);
+        } else {
+          $("body").removeClass("dark").addClass("light");
+          $(".navbar-sun-light").attr("src", "assets/img/sun.svg");
+          $(".logo-dark").attr("src", "assets/img/logo-dark.png");
+          $(".logo-light").attr("src", "assets/img/logo-light.png");
+          t = 0;
+          localStorage.setItem("theme", 0);
+          console.log(t);
+        }
+      }
+    </script>
   </body>
 </html>

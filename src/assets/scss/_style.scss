@@ -166,6 +166,7 @@ $accent-color-hover: rgb(51, 0, 255);
   background-color: #000000;
   .watermarkContainer {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -204,18 +205,24 @@ $accent-color-hover: rgb(51, 0, 255);
 }
 
 .navbar-mobile {
-  // background-color: #000000 !important;
-  // border-right: 1px solid #ffffff18;
-  .nav-link {
-    color: rgba(255, 255, 255, 0.65) !important;
+  @media (max-width: 992px) {
+    background-color: #000000 !important;
+    border-right: 1px solid #ffffff18;
+    .nav-link {
+      color: rgba(255, 255, 255, 0.65) !important;
+    }
   }
 }
 
 .big-heading {
   font-size: 2.8125rem;
   font-weight: 600;
+  line-height: 1.2;
   @media (min-width: 1500px) {
     font-size: 4.5rem;
+  }
+  @media (max-width: 768px) {
+    line-height: 1.5;
   }
 }
 
@@ -326,6 +333,7 @@ $accent-color-hover: rgb(51, 0, 255);
 .footer-dark {
   background: linear-gradient(180deg, #000000 0%, #010111 75%);
   color: #ffffff;
+  border-top-color: rgba(241, 242, 243, 0.3);
 }
 
 .team-1 {
@@ -505,13 +513,21 @@ textarea {
 .social-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   .social-button {
+    margin: 1.5rem !important;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 7rem;
+    height: 7rem;
     @media (max-width: 768px) {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
+      width: 5rem;
+      height: 5rem;
+      font-size: 0.7rem;
     }
   }
 }
