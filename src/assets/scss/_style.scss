@@ -418,13 +418,19 @@ $accent-color-hover: rgb(51, 0, 255);
   background-color: transparent !important;
   box-shadow: none !important;
   .navbar-mobile {
-    background-color: transparent !important;
+    @media (min-width: 768px) {
+      background-color: transparent !important;
+    }
   }
 }
 
 [data-scrim-bottom] {
   &::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, #000000 100%);
+    background: linear-gradient(
+      to bottom,
+      var(--bg-scrim-1) 0%,
+      var(--bg-black) 100%
+    );
   }
   .container {
     display: flex;
@@ -433,7 +439,8 @@ $accent-color-hover: rgb(51, 0, 255);
     h1 {
       font-weight: 600;
       font-size: 6rem;
-      box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.15);
+      text-shadow: 5px 5px 15px rgba($color: var(--bg-white), $alpha: 1);
+      color: var(--bg-white);
       @media (max-width: 768px) {
         font-size: 3.5rem;
       }
@@ -633,6 +640,7 @@ body.light {
   --bg-completedprojects-2: #485461;
   --bg-okemos-1: #009ffd;
   --bg-okemos-2: #2a2a72;
+  --bg-scrim-1: rgba(255, 255, 255, 0.1);
 }
 body.dark {
   --bg-black: #000000;
@@ -670,4 +678,5 @@ body.dark {
   --bg-completedprojects-2: #f5e3e6;
   --bg-okemos-1: #83eaf1;
   --bg-okemos-2: #63a4ff;
+  --bg-scrim-1: rgba(0, 0, 0, 0.1);
 }
