@@ -29,7 +29,8 @@
 
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-stick-light h-80px"
+    <nav class="navbar navbar-expand-lg navbar-light transparent-navbar
+      navbar-stick-light h-80px"
       data-navbar="smart">
       <div class="container">
 
@@ -75,7 +76,7 @@
     <header class="header text-white mh-100vh py-3 d-flex align-items-center
       justify-content-center">
       <div class="watermarkContainer">
-        <h1 class="watermark d-lg-none">AI</h1>
+        <h1 class="watermark">AI</h1>
       </div>
       <div class="container">
         <div class="row">
@@ -85,7 +86,7 @@
               We will provide your machines a way of learning.
             </h1>
 
-            <hr class="w-10 ml-0 mt-5 mb-7">
+            <hr class="w-10 ml-0 mt-5 hr mb-7" size="1px">
             <div class="gap-xy"
               data-aos="fade-up"
               data-aos-duration="300"
@@ -280,41 +281,5 @@
 
     <!-- Scripts -->
     <script src="assets/js/page.min.js"></script>
-    <script>
-      var t = localStorage.getItem("theme") || 0;
-      themeSwitcher();
-      $(".theme-switcher").click(function () {
-        if (t == 1) {
-          t = 0;
-          localStorage.setItem("theme", 0);
-        } else {
-          t = 1;
-          localStorage.setItem("theme", 1);
-        }
-        themeSwitcher();
-      });
-      console.clear();
-      console.log(t);
-
-      function themeSwitcher() {
-        if (t == 1) {
-          $("body").addClass("dark").removeClass("light");
-          $(".navbar-sun-light").attr("src", "assets/img/moon.svg");
-          $(".logo-dark").attr("src", "assets/img/logo-light.png");
-          $(".logo-light").attr("src", "assets/img/logo-dark.png");
-          t = 1;
-          localStorage.setItem("theme", 1);
-          console.log(t);
-        } else {
-          $("body").removeClass("dark").addClass("light");
-          $(".navbar-sun-light").attr("src", "assets/img/sun.svg");
-          $(".logo-dark").attr("src", "assets/img/logo-dark.png");
-          $(".logo-light").attr("src", "assets/img/logo-light.png");
-          t = 0;
-          localStorage.setItem("theme", 0);
-          console.log(t);
-        }
-      }
-    </script>
   </body>
 </html>

@@ -12,27 +12,27 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000000;
+  background-color: var(--bg-black);
 }
 
 .navbar-stick-dark {
-  background-color: #000000 !important;
+  background-color: var(--bg-black) !important;
 }
 .navbar-stick-light {
-  background-color: #000000 !important;
+  background-color: var(--bg-black) !important;
 }
 
 $accent-color: rgb(72, 112, 255);
 $accent-color-hover: rgb(51, 0, 255);
 
 .btn-accent {
-  color: #000000 !important;
+  color: var(--bg-black) !important;
   background: $accent-color;
   background: linear-gradient(
     45deg,
-    rgba(72, 112, 255, 1) 0%,
-    rgba(12, 152, 196, 1) 50%,
-    rgba(51, 0, 255, 1) 100%
+    var(--bg-accent-1) 0%,
+    var(--bg-accent-2) 50%,
+    var(--bg-accent-3) 100%
   );
   border-color: $accent-color;
   border-radius: 4px;
@@ -45,19 +45,19 @@ $accent-color-hover: rgb(51, 0, 255);
     background: rgb(51, 0, 255);
     background: radial-gradient(
       circle,
-      rgb(0, 60, 255) 0%,
-      rgba(12, 152, 196, 1) 100%
+      var(--bg-accent-hover-1) 0%,
+      var(--bg-accent-hover-2) 100%
     );
-    border-color: #ffffff;
+    border-color: var(--bg-white);
     box-shadow: 0 1px 10px rgba(80, 161, 255, 0.4);
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
   }
-  &:focus,
-  &.focus {
+  &.focus,
+  &:focus {
     color: var(--bg-white);
-    box-shadow: 0 0 0 0rem rgba(80, 161, 255, 0.5);
+    box-shadow: 0 0 0 0 rgba(80, 161, 255, 0.5);
   }
 }
 
@@ -74,21 +74,21 @@ $accent-color-hover: rgb(51, 0, 255);
     //   rgba(12, 152, 196, 1) 50%,
     //   rgba(51, 0, 255, 1) 100%
     // );
-    background: #ffffff;
+    background: var(--bg-white);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
   }
   border-color: $accent-color;
-  &:focus,
-  &.focus {
+  &.focus,
+  &:focus {
     color: $accent-color !important;
-    box-shadow: 0 0 0 0rem rgba(80, 161, 255, 0.5);
+    box-shadow: 0 0 0 0 rgba(80, 161, 255, 0.5);
   }
   &:hover {
     span {
-      background: #000000;
+      background: var(--bg-black);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -96,17 +96,16 @@ $accent-color-hover: rgb(51, 0, 255);
     background: rgb(51, 0, 255);
     background: radial-gradient(
       circle,
-      rgb(0, 60, 255) 0%,
-      rgba(12, 152, 196, 1) 100%
+      var(--bg-accent-hover-1) 0%,
+      var(--bg-accent-hover-2) 100%
     );
-    border-color: #ffffff;
+    border-color: var(--bg-white);
     box-shadow: 0 1px 10px rgba(80, 161, 255, 0.4);
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
   }
 }
-
 @media (min-width: 1800px) {
   .container {
     max-width: 1640px;
@@ -163,7 +162,7 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .header {
   padding: 0;
-  background-color: #000000;
+  background-color: var(--bg-black);
   .watermarkContainer {
     display: flex;
     width: 100%;
@@ -179,7 +178,11 @@ $accent-color-hover: rgb(51, 0, 255);
       font-size: 50rem;
       @include lhCrop(1);
       line-height: 1;
-      background: -webkit-linear-gradient(45deg, #585858 0%, #000000 100%);
+      background: -webkit-linear-gradient(
+        45deg,
+        var(--bg-watermark-gradient-light) 0%,
+        var(--bg-watermark-gradient-dark) 95%
+      );
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -206,12 +209,17 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .navbar-mobile {
   @media (max-width: 992px) {
-    background-color: #000000 !important;
+    background-color: var(--bg-black) !important;
     border-right: 1px solid #ffffff18;
     .nav-link {
-      color: rgba(255, 255, 255, 0.65) !important;
+      color: var(--bg-nav-link) !important;
     }
   }
+}
+
+.nav-link,
+.navbar-toggler {
+  color: var(--bg-nav-link) !important;
 }
 
 .big-heading {
@@ -224,6 +232,7 @@ $accent-color-hover: rgb(51, 0, 255);
   @media (max-width: 768px) {
     line-height: 1.5;
   }
+  color: var(--bg-white) !important;
 }
 
 .endScroll {
@@ -246,7 +255,11 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .ourMission {
   font-weight: 600;
-  background: -webkit-linear-gradient(45deg, #ff0606 0%, #ffdd00 100%);
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--bg-ourmission-1) 0%,
+    var(--bg-ourmission-2) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -255,7 +268,11 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .workCulture {
   font-weight: 600;
-  background: -webkit-linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+  background: -webkit-linear-gradient(
+    315deg,
+    var(--bg-workculture-1) 0%,
+    var(--bg-workculture-2) 74%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -264,7 +281,11 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .teamHeading {
   font-weight: 600;
-  background: -webkit-linear-gradient(315deg, #fefefe 0%, #00a4e4 74%);
+  background: -webkit-linear-gradient(
+    315deg,
+    var(--bg-teamheading-1) 0%,
+    var(--bg-teamheading-2) 74%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -273,7 +294,11 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .ongoingProjects {
   font-weight: 600;
-  background: -webkit-linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+  background: -webkit-linear-gradient(
+    315deg,
+    var(--bg-ongoingprojects-1) 0%,
+    var(--bg-ongoingprojects-2) 74%
+  );
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -283,7 +308,11 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .completedProjects {
   font-weight: 600;
-  background: -webkit-linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+  background: -webkit-linear-gradient(
+    315deg,
+    var(--bg-completedprojects-1) 0%,
+    var(--bg-completedprojects-2) 74%
+  );
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -293,7 +322,11 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .contactUs {
   font-weight: 600;
-  background: -webkit-linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  background: -webkit-linear-gradient(
+    315deg,
+    var(--bg-workculture-1) 0%,
+    var(--bg-workculture-2) 74%
+  );
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -303,7 +336,11 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .qoe {
   font-weight: 600;
-  background: -webkit-linear-gradient(45deg, #ff0606 0%, #ffdd00 100%);
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--bg-ourmission-1) 0%,
+    var(--bg-ourmission-2) 100%
+  );
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -313,7 +350,11 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .okemos {
   font-weight: 600;
-  background: -webkit-linear-gradient(315deg, #b8d3fe 0%, #aecad6 74%);
+  background: -webkit-linear-gradient(
+    315deg,
+    var(--bg-okemos-1) 0%,
+    var(--bg-okemos-2) 74%
+  );
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -322,25 +363,34 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .address {
   p {
-    color: #ffffffad;
+    color: var(--bg-address);
   }
 }
 
 .lead {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--bg-lead);
+  font-weight: 400;
 }
 
 .footer-dark {
-  background: linear-gradient(180deg, #000000 0%, #010111 75%);
-  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    var(--bg-black) 0%,
+    var(--bg-footer-blue) 75%
+  );
+  color: var(--bg-white);
   border-top-color: rgba(241, 242, 243, 0.3);
 }
 
 .team-1 {
   h3 {
-    color: white;
+    color: var(--bg-white);
     small {
-      background: -webkit-linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
+      background: -webkit-linear-gradient(
+        315deg,
+        var(--bg-small-1) 0%,
+        var(--bg-small-2) 74%
+      );
 
       background-clip: text;
       -webkit-background-clip: text;
@@ -348,24 +398,25 @@ $accent-color-hover: rgb(51, 0, 255);
     }
   }
   p {
-    color: #ffffffbd;
+    color: var(--bg-team-details);
   }
 }
 
 .venture-header {
   height: 70vh;
-  background-image: url(../img/ventures.png);
+  background-image: url("../img/ventures.png");
   background-size: cover;
 }
 
 .connect-header {
   height: 70vh;
-  background-image: url(../img/contact.png);
+  background-image: url("../img/contact.png");
   background-size: cover;
 }
 
 .transparent-navbar {
   background-color: transparent !important;
+  box-shadow: none !important;
   .navbar-mobile {
     background-color: transparent !important;
   }
@@ -382,7 +433,7 @@ $accent-color-hover: rgb(51, 0, 255);
     h1 {
       font-weight: 600;
       font-size: 6rem;
-      box-shadow: 0 0px 15px rgba($color: #000000, $alpha: 0.15);
+      box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.15);
       @media (max-width: 768px) {
         font-size: 3.5rem;
       }
@@ -402,10 +453,14 @@ section {
   padding-left: 4rem;
   padding-right: 4rem;
   .card {
-    background-color: #121218 !important;
+    background-color: var(--bg-card) !important;
     border-radius: 4px;
     h4 {
-      background: -webkit-linear-gradient(-135deg, #90d5ec 0%, #fc575e 74%);
+      background: -webkit-linear-gradient(
+        -135deg,
+        var(--bg-card-title-1) 0%,
+        var(--bg-card-title-2) 74%
+      );
 
       background-clip: text;
       -webkit-background-clip: text;
@@ -413,16 +468,20 @@ section {
       font-weight: 500;
     }
     p {
-      color: rgba($color: #ffffff, $alpha: 0.5);
+      color: rgba($color: var(--bg-white), $alpha: 0.5);
     }
   }
 }
 
 .card {
-  background-color: #121218 !important;
+  background-color: var(--bg-card) !important;
   border-radius: 4px;
   h4 {
-    background: -webkit-linear-gradient(-135deg, #90d5ec 0%, #fc575e 74%);
+    background: -webkit-linear-gradient(
+      -135deg,
+      var(--bg-card-title-1) 0%,
+      var(--bg-card-title-2) 74%
+    );
 
     background-clip: text;
     -webkit-background-clip: text;
@@ -430,7 +489,7 @@ section {
     font-weight: 500;
   }
   p {
-    color: rgba($color: #ffffff, $alpha: 0.5);
+    color: rgba($color: var(--bg-white), $alpha: 0.5);
   }
 }
 
@@ -445,42 +504,43 @@ section {
   border-color: #2167b2;
   box-shadow: 0 1px 10px #2167b269;
 }
-.btn-linkedin:focus,
-.btn-linkedin.focus {
+.btn-linkedin.focus,
+.btn-linkedin:focus {
   color: #fff;
-  box-shadow: 0 0 0 0rem #2167b280;
+  box-shadow: 0 0 0 0 #2167b280;
 }
 .btn-linkedin.disabled,
 .btn-linkedin:disabled {
   background-color: #2867b2;
   border-color: #2867b2;
 }
-.btn-linkedin:not([disabled]):not(.disabled):active,
 .btn-linkedin:not([disabled]):not(.disabled).active,
+.btn-linkedin:not([disabled]):not(.disabled):active,
 .show > .btn-linkedin.dropdown-toggle {
   color: #fff;
   background-color: #2167b2;
   border-color: #2167b2;
-  box-shadow: 0 0 0 0rem #2167b280;
+  box-shadow: 0 0 0 0 #2167b280;
 }
 
 .form-group {
   label {
-    color: #ffffff80;
+    color: var(--bg-form-label);
   }
 }
 
 .form-control,
 .input-group,
-.input-group-text,
-.input-group .btn {
+.input-group .btn,
+.input-group-text {
   border-radius: 4px;
-  border: 1px solid #ffffff80;
+  border: 1px solid var(--bg-form-label);
   background-color: transparent;
-  color: #ffffffcc !important;
-  &:focus,
-  &:active {
-    background-color: #02020e;
+  color: var(--bg-form-color) !important;
+  &:active,
+  &:focus {
+    background-color: var(--bg-form-focus);
+    border: 1px solid var(--bg-form-label);
   }
 }
 
@@ -491,7 +551,7 @@ section {
 
 textarea {
   border-radius: 4px;
-  color: #ffffffcc !important;
+  color: var(--bg-form-color) !important;
 }
 
 .input-group-text {
@@ -530,4 +590,84 @@ textarea {
       font-size: 0.7rem;
     }
   }
+}
+
+.hr {
+  background-color: var(--bg-form-label);
+  // background-color: var(--bg-white);
+}
+
+body.light {
+  --bg-black: #f8f8f8;
+  --bg-white: #121212;
+  --bg-watermark-gradient-light: #7a94a8;
+  --bg-watermark-gradient-dark: #f8f8f8;
+  --bg-nav-link: rgba(117, 117, 117, 0.8);
+  --bg-lead: rgba(0, 0, 0, 0.7);
+  --bg-footer-blue: #d9e7ff;
+  --bg-footer-border: rgba(15, 14, 13, 0.3);
+  --bg-team-details: #000000f3;
+  --bg-card: #e8edff;
+  --bg-card-title-1: #09c6f9;
+  --bg-card-title-2: #045de9;
+  --bg-form-label: #00000080;
+  --bg-form-color: #000000cc;
+  --bg-form-focus: #fdfdf1;
+  --bg-address: #000000ad;
+  --bg-accent-1: rgba(72, 112, 255, 1);
+  --bg-accent-2: #50a1ff;
+  --bg-accent-3: rgb(91, 50, 255);
+  --bg-accent-hover-1: rgb(55, 101, 255);
+  --bg-accent-hover-2: #50a1ff;
+  --bg-ourmission-1: #ff0606;
+  --bg-ourmission-2: #ffdd00;
+  --bg-workculture-1: #6e72fc;
+  --bg-workculture-2: #ad1deb;
+  --bg-teamheading-1: #b621fe;
+  --bg-teamheading-2: #1fd1f9;
+  --bg-small-1: #f2a65a;
+  --bg-small-2: #772f1a;
+  --bg-ongoingprojects-1: #5aff15;
+  --bg-ongoingprojects-2: #00b712;
+  --bg-completedprojects-1: #28313b;
+  --bg-completedprojects-2: #485461;
+  --bg-okemos-1: #009ffd;
+  --bg-okemos-2: #2a2a72;
+}
+body.dark {
+  --bg-black: #000000;
+  --bg-white: #ffffff;
+  --bg-watermark-gradient-light: #585858;
+  --bg-watermark-gradient-dark: #000000;
+  --bg-nav-link: rgba(255, 255, 255, 0.65);
+  --bg-lead: rgba(255, 255, 255, 0.7);
+  --bg-footer-blue: #010111;
+  --bg-footer-border: rgba(241, 242, 243, 0.3);
+  --bg-team-details: #ffffffbd;
+  --bg-card: #121218;
+  --bg-card-title-1: #efe9f4;
+  --bg-card-title-2: #5078f2;
+  --bg-form-label: #ffffff80;
+  --bg-form-color: #ffffffcc;
+  --bg-form-focus: #02020e;
+  --bg-address: #ffffffad;
+  --bg-accent-1: rgba(72, 112, 255, 1);
+  --bg-accent-2: rgba(12, 152, 196, 1);
+  --bg-accent-3: rgba(51, 0, 255, 1);
+  --bg-accent-hover-1: rgb(0, 60, 255);
+  --bg-accent-hover-2: rgba(12, 152, 196, 1);
+  --bg-ourmission-1: #ff0606;
+  --bg-ourmission-2: #ffdd00;
+  --bg-workculture-1: #6e72fc;
+  --bg-workculture-2: #ad1deb;
+  --bg-teamheading-1: #fefefe;
+  --bg-teamheading-2: #00a4e4;
+  --bg-small-1: #f9d29d;
+  --bg-small-2: #ffd8cb;
+  --bg-ongoingprojects-1: #7ee8fa;
+  --bg-ongoingprojects-2: #80ff72;
+  --bg-completedprojects-1: #d9e4f5;
+  --bg-completedprojects-2: #f5e3e6;
+  --bg-okemos-1: #83eaf1;
+  --bg-okemos-2: #63a4ff;
 }
