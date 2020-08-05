@@ -45,6 +45,10 @@ $(function () {
         "background-image",
         "url(assets/img/contact.png)"
       );
+      $(".careers-header").css(
+        "background-image",
+        "url(assets/img/careers.png)"
+      );
       $(".scroll").attr("src", "assets/img/scroll.gif");
       t = 1;
       localStorage.setItem("theme", 1);
@@ -67,6 +71,10 @@ $(function () {
       $(".connect-header").css(
         "background-image",
         "url(assets/img/contactl.png)"
+      );
+      $(".careers-header").css(
+        "background-image",
+        "url(assets/img/careersl.png)"
       );
       $(".scroll").attr("src", "assets/img/scrolll.gif");
       t = 0;

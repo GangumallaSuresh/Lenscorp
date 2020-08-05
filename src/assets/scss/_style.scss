@@ -414,6 +414,12 @@ $accent-color-hover: rgb(51, 0, 255);
   background-size: cover;
 }
 
+.careers-header {
+  height: 70vh;
+  background-image: url("../img/careers.png");
+  background-size: cover;
+}
+
 .transparent-navbar {
   background-color: transparent !important;
   box-shadow: none !important;
@@ -428,8 +434,8 @@ $accent-color-hover: rgb(51, 0, 255);
   &::before {
     background: linear-gradient(
       to bottom,
-      var(--bg-scrim-1) 0%,
-      var(--bg-black) 100%
+      var(--bg-scrim-1) 20%,
+      var(--bg-black) 110%
     );
   }
   .container {
