@@ -175,19 +175,19 @@ $accent-color-hover: rgb(51, 0, 255);
     left: 50%;
     transform: translate(-50%, -50%);
     .watermark {
-      font-size: 50rem;
+      font-size: 40rem;
       @include lhCrop(1);
       line-height: 1;
       background: -webkit-linear-gradient(
         45deg,
         var(--bg-watermark-gradient-light) 0%,
-        var(--bg-watermark-gradient-dark) 95%
+        var(--bg-watermark-gradient-dark) 100%
       );
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       @media (min-width: 1500px) {
-        font-size: 70rem;
+        font-size: 50rem;
       }
       opacity: 0.4;
     }
@@ -370,6 +370,9 @@ $accent-color-hover: rgb(51, 0, 255);
 .lead {
   color: var(--bg-lead);
   font-weight: 400;
+  @media (min-width: 1500px) {
+    font-size: 1.35rem;
+  }
 }
 
 .footer-dark {
@@ -435,7 +438,7 @@ $accent-color-hover: rgb(51, 0, 255);
     background: linear-gradient(
       to bottom,
       var(--bg-scrim-1) 20%,
-      var(--bg-black) 110%
+      var(--bg-black) 105%
     );
   }
   .container {
@@ -610,6 +613,38 @@ textarea {
   // background-color: var(--bg-white);
 }
 
+.custom-popup {
+  top: 6rem !important;
+  // right: 4rem !important;
+  background: linear-gradient(
+    45deg,
+    var(--bg-accent-1) 0%,
+    var(--bg-accent-2) 50%,
+    var(--bg-accent-3) 100%
+  );
+  span {
+    color: var(--bg-black);
+  }
+  h3 {
+    color: var(--bg-black);
+    font-weight: 600;
+  }
+  p {
+    color: var(--bg-black);
+    font-weight: 400;
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%; /* At the top of the tooltip */
+    right: 14px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--bg-white) transparent;
+  }
+}
+
 body.light {
   --bg-black: #f8f8f8;
   --bg-white: #121212;
@@ -632,8 +667,8 @@ body.light {
   --bg-accent-3: rgb(91, 50, 255);
   --bg-accent-hover-1: rgb(55, 101, 255);
   --bg-accent-hover-2: #50a1ff;
-  --bg-ourmission-1: #ff0606;
-  --bg-ourmission-2: #ffdd00;
+  --bg-ourmission-1: #ed008c;
+  --bg-ourmission-2: #fff000;
   --bg-workculture-1: #6e72fc;
   --bg-workculture-2: #ad1deb;
   --bg-teamheading-1: #b621fe;
