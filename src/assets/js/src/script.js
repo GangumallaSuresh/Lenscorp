@@ -61,6 +61,7 @@ $(function () {
         "background-image",
         "url(assets/img/careers.png)"
       );
+      $(".portal-header").css("background-image", "url(assets/img/portal.png)");
       $(".scroll").attr("src", "assets/img/scroll.gif");
       $(".custom-popup").removeClass("show");
       popuphide();
@@ -89,6 +90,10 @@ $(function () {
       $(".careers-header").css(
         "background-image",
         "url(assets/img/careersl.png)"
+      );
+      $(".portal-header").css(
+        "background-image",
+        "url(assets/img/portall.png)"
       );
       $(".scroll").attr("src", "assets/img/scrolll.gif");
       popupshow();

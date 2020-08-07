@@ -222,6 +222,11 @@ $accent-color-hover: rgb(51, 0, 255);
   color: var(--bg-nav-link) !important;
 }
 
+.nav-link.active {
+  color: var(--bg-white) !important;
+  font-weight: 700;
+}
+
 .big-heading {
   font-size: 2.8125rem;
   font-weight: 600;
@@ -423,6 +428,12 @@ $accent-color-hover: rgb(51, 0, 255);
   background-size: cover;
 }
 
+.portal-header {
+  height: 70vh;
+  background-image: url("../img/portal.png");
+  background-size: cover;
+}
+
 .transparent-navbar {
   background-color: transparent !important;
   box-shadow: none !important;
@@ -448,7 +459,7 @@ $accent-color-hover: rgb(51, 0, 255);
     h1 {
       font-weight: 600;
       font-size: 6rem;
-      text-shadow: 5px 5px 15px rgba($color: var(--bg-white), $alpha: 1);
+      text-shadow: 0px 0px 25px var(--bg-h1);
       color: var(--bg-white);
       @media (max-width: 768px) {
         font-size: 3.5rem;
@@ -645,13 +656,45 @@ textarea {
   }
 }
 
+.input-group {
+  .input-group-prepend {
+    .input-group-text {
+      border-top-left-radius: 10rem;
+      border-bottom-left-radius: 10rem;
+      border: 0px solid var(--bg-form-label);
+      background-color: transparent;
+      color: var(--bg-form-color) !important;
+    }
+  }
+  &:active,
+  &:focus,
+  &.focus {
+    background-color: var(--bg-form-focus);
+    border: 1px solid var(--bg-form-label);
+    .form-control {
+      border: 0rem;
+    }
+  }
+}
+.job-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  p {
+    font-weight: 500;
+  }
+}
+
 body.light {
   --bg-black: #f8f8f8;
   --bg-white: #121212;
   --bg-watermark-gradient-light: #7a94a8;
   --bg-watermark-gradient-dark: #f8f8f8;
-  --bg-nav-link: rgba(117, 117, 117, 0.8);
+  --bg-navlink-active-light: #585858;
+  --bg-navlink-active-dark: #000000;
+  --bg-nav-link: rgba(48, 48, 48, 0.8);
   --bg-lead: rgba(0, 0, 0, 0.7);
+  --bg-h1: rgba(255, 255, 255, 0.7);
   --bg-footer-blue: #d9e7ff;
   --bg-footer-border: rgba(15, 14, 13, 0.3);
   --bg-team-details: #000000f3;
@@ -688,8 +731,11 @@ body.dark {
   --bg-white: #ffffff;
   --bg-watermark-gradient-light: #585858;
   --bg-watermark-gradient-dark: #000000;
-  --bg-nav-link: rgba(255, 255, 255, 0.65);
+  --bg-navlink-active-light: #7a94a8;
+  --bg-navlink-active-dark: #f8f8f8;
+  --bg-nav-link: rgba(221, 221, 221, 0.65);
   --bg-lead: rgba(255, 255, 255, 0.7);
+  --bg-h1: rgba(0, 0, 0, 0.7);
   --bg-footer-blue: #010111;
   --bg-footer-border: rgba(241, 242, 243, 0.3);
   --bg-team-details: #ffffffbd;
