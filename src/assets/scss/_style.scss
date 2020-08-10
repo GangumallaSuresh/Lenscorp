@@ -271,6 +271,10 @@ $accent-color-hover: rgb(51, 0, 255);
   font-size: 2.5rem;
 }
 
+.mission-statement {
+  color: var(--bg-statement) !important;
+}
+
 .workCulture {
   font-weight: 600;
   background: -webkit-linear-gradient(
@@ -390,7 +394,14 @@ $accent-color-hover: rgb(51, 0, 255);
   border-top-color: rgba(241, 242, 243, 0.3);
 }
 
-.team-1 {
+hover-shadow-6:hover {
+  box-shadow: 0 0 36px rgba(var(--bg-white), 0.06);
+}
+
+.team-2 {
+  img {
+    width: 60%;
+  }
   h3 {
     color: var(--bg-white);
     small {
@@ -410,27 +421,51 @@ $accent-color-hover: rgb(51, 0, 255);
   }
 }
 
-.venture-header {
+.no-webp .venture-header {
   height: 70vh;
   background-image: url("../img/ventures.png");
   background-size: cover;
 }
 
-.connect-header {
+.webp .venture-header {
+  height: 70vh;
+  background-image: url("../img/ventures.webp");
+  background-size: cover;
+}
+
+.no-webp .connect-header {
   height: 70vh;
   background-image: url("../img/contact.png");
   background-size: cover;
 }
 
-.careers-header {
+.webp .connect-header {
+  height: 70vh;
+  background-image: url("../img/contact.webp");
+  background-size: cover;
+}
+
+.no-webp .careers-header {
   height: 70vh;
   background-image: url("../img/careers.png");
   background-size: cover;
 }
 
-.portal-header {
+.webp .careers-header {
+  height: 70vh;
+  background-image: url("../img/careers.webp");
+  background-size: cover;
+}
+
+.no-webp .portal-header {
   height: 70vh;
   background-image: url("../img/portal.png");
+  background-size: cover;
+}
+
+.webp .portal-header {
+  height: 70vh;
+  background-image: url("../img/portal.webp");
   background-size: cover;
 }
 
@@ -472,8 +507,11 @@ $accent-color-hover: rgb(51, 0, 255);
 }
 
 section {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  .section-header {
+    margin-bottom: 3rem;
+  }
 }
 
 .px-44 {
@@ -685,6 +723,10 @@ textarea {
   }
 }
 
+.mh-224 {
+  min-height: 224px;
+}
+
 body.light {
   --bg-black: #f8f8f8;
   --bg-white: #121212;
@@ -694,6 +736,7 @@ body.light {
   --bg-navlink-active-dark: #000000;
   --bg-nav-link: rgba(48, 48, 48, 0.8);
   --bg-lead: rgba(0, 0, 0, 0.7);
+  --bg-statement: rgba(0, 0, 0, 0.8);
   --bg-h1: rgba(255, 255, 255, 0.7);
   --bg-footer-blue: #d9e7ff;
   --bg-footer-border: rgba(15, 14, 13, 0.3);
@@ -735,6 +778,7 @@ body.dark {
   --bg-navlink-active-dark: #f8f8f8;
   --bg-nav-link: rgba(221, 221, 221, 0.65);
   --bg-lead: rgba(255, 255, 255, 0.7);
+  --bg-statement: rgba(255, 255, 255, 0.8);
   --bg-h1: rgba(0, 0, 0, 0.7);
   --bg-footer-blue: #010111;
   --bg-footer-border: rgba(241, 242, 243, 0.3);

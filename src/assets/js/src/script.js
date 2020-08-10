@@ -49,19 +49,38 @@ $(function () {
       $(".slider-arrows-flash-dark")
         .addClass("slider-arrows-flash-light")
         .removeClass("slider-arrows-flash-dark");
-      $(".venture-header").css(
+      $(".no-webp .venture-header").css(
         "background-image",
         "url(assets/img/ventures.png)"
       );
-      $(".connect-header").css(
+      $(".webp .venture-header").css(
+        "background-image",
+        "url(assets/img/ventures.webp)"
+      );
+      $(".no-webp .connect-header").css(
         "background-image",
         "url(assets/img/contact.png)"
       );
-      $(".careers-header").css(
+      $(".webp .connect-header").css(
+        "background-image",
+        "url(assets/img/contact.webp)"
+      );
+      $(".no-webp .careers-header").css(
         "background-image",
         "url(assets/img/careers.png)"
       );
-      $(".portal-header").css("background-image", "url(assets/img/portal.png)");
+      $(".webp .careers-header").css(
+        "background-image",
+        "url(assets/img/careers.webp)"
+      );
+      $(".no-webp .portal-header").css(
+        "background-image",
+        "url(assets/img/portal.png)"
+      );
+      $(".webp .portal-header").css(
+        "background-image",
+        "url(assets/img/portal.webp)"
+      );
       $(".scroll").attr("src", "assets/img/scroll.gif");
       $(".custom-popup").removeClass("show");
       popuphide();
@@ -79,21 +98,37 @@ $(function () {
       $(".slider-arrows-flash-light")
         .addClass("slider-arrows-flash-dark")
         .removeClass("slider-arrows-flash-light");
-      $(".venture-header").css(
+      $(".no-webp .venture-header").css(
         "background-image",
         "url(assets/img/venturesl.png)"
       );
-      $(".connect-header").css(
+      $(".webp .venture-header").css(
+        "background-image",
+        "url(assets/img/venturesl.webp)"
+      );
+      $(".no-webp .connect-header").css(
         "background-image",
         "url(assets/img/contactl.png)"
       );
-      $(".careers-header").css(
+      $(".webp .connect-header").css(
+        "background-image",
+        "url(assets/img/contactl.webp)"
+      );
+      $(".no-webp .careers-header").css(
         "background-image",
         "url(assets/img/careersl.png)"
       );
-      $(".portal-header").css(
+      $(".webp .careers-header").css(
+        "background-image",
+        "url(assets/img/careersl.webp)"
+      );
+      $(".no-webp .portal-header").css(
         "background-image",
         "url(assets/img/portall.png)"
+      );
+      $(".webp .portal-header").css(
+        "background-image",
+        "url(assets/img/portall.webp)"
       );
       $(".scroll").attr("src", "assets/img/scrolll.gif");
       popupshow();

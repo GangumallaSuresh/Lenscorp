@@ -1,4 +1,3 @@
-
 /*
 |--------------------------------------------------------------------------
 | Core
@@ -8,7 +7,7 @@
 | plugins and define page object. This file is required.
 |
 */
-require('../../plugin/thesaas/js/loaders/core.js');
+require("../../plugin/thesaas/js/loaders/core.js");
 
 /*
 |--------------------------------------------------------------------------
@@ -22,18 +21,17 @@ require('../../plugin/thesaas/js/loaders/core.js');
 | know how much KB you can save by removing a vendor.
 |
 */
-require('../../plugin/thesaas/js/vendors/aos.js');            // 14 kb
-require('../../plugin/thesaas/js/vendors/constellation.js');  // 03 kb
-require('../../plugin/thesaas/js/vendors/countdown.js');      // 05 kb
-require('../../plugin/thesaas/js/vendors/countup.js');        // 13 kb
-require('../../plugin/thesaas/js/vendors/granim.js');         // 15 kb
-require('../../plugin/thesaas/js/vendors/jarallax.js');       // 23 kb
-require('../../plugin/thesaas/js/vendors/lity.js');           // 07 kb
-require('../../plugin/thesaas/js/vendors/photoswipe.js');     // 45 kb
-require('../../plugin/thesaas/js/vendors/shuffle.js');        // 25 kb
-require('../../plugin/thesaas/js/vendors/slick.js');          // 43 kb
-require('../../plugin/thesaas/js/vendors/typed.js');          // 11 kb
-
+require("../../plugin/thesaas/js/vendors/aos.js"); // 14 kb
+require("../../plugin/thesaas/js/vendors/constellation.js"); // 03 kb
+require("../../plugin/thesaas/js/vendors/countdown.js"); // 05 kb
+require("../../plugin/thesaas/js/vendors/countup.js"); // 13 kb
+require("../../plugin/thesaas/js/vendors/granim.js"); // 15 kb
+require("../../plugin/thesaas/js/vendors/jarallax.js"); // 23 kb
+require("../../plugin/thesaas/js/vendors/lity.js"); // 07 kb
+require("../../plugin/thesaas/js/vendors/photoswipe.js"); // 45 kb
+require("../../plugin/thesaas/js/vendors/shuffle.js"); // 25 kb
+require("../../plugin/thesaas/js/vendors/slick.js"); // 43 kb
+require("../../plugin/thesaas/js/vendors/typed.js"); // 11 kb
 
 /*
 |--------------------------------------------------------------------------
@@ -43,8 +41,7 @@ require('../../plugin/thesaas/js/vendors/typed.js');          // 11 kb
 | Split the application code to several files. This file is required.
 |
 */
-require('../../plugin/thesaas/js/loaders/partials.js');
-
+require("../../plugin/thesaas/js/loaders/partials.js");
 
 /*
 |--------------------------------------------------------------------------
@@ -54,8 +51,7 @@ require('../../plugin/thesaas/js/loaders/partials.js');
 | Modify some variables to personalize your project. This file is required.
 |
 */
-require('./config.js');
-
+require("./config.js");
 
 /*
 |--------------------------------------------------------------------------
@@ -66,4 +62,5 @@ require('./config.js');
 | files and import the other files here or inside script.js.
 |
 */
-require('./script.js');
+require("./script.js");
+require("./modernizr.js");
