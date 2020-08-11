@@ -401,6 +401,7 @@ hover-shadow-6:hover {
 .team-2 {
   img {
     width: 60%;
+    border-radius: 50%;
   }
   h3 {
     color: var(--bg-white);
@@ -665,6 +666,8 @@ textarea {
 .custom-popup {
   top: 6rem !important;
   // right: 4rem !important;
+  padding: 1rem;
+  border-radius: 4px;
   background: linear-gradient(
     45deg,
     var(--bg-accent-1) 0%,
@@ -677,6 +680,7 @@ textarea {
   h3 {
     color: var(--bg-black);
     font-weight: 600;
+    margin-bottom: 0;
   }
   p {
     color: var(--bg-black);

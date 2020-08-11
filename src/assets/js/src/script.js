@@ -139,8 +139,10 @@ $(function () {
   }
 
   var offset = $(".theme-switcher").offset();
+  var widthT = $(".theme-switcher").width();
   var posX = offset.left - $(window).scrollLeft();
   var widthX = $(".custom-popup").width();
 
-  if (posX - widthX > 0) $(".custom-popup").css("left", posX - widthX);
+  if (posX - widthX > 0)
+    $(".custom-popup").css("left", posX - widthX + widthT / 2);
 });
