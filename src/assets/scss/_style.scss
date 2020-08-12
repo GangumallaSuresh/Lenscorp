@@ -64,6 +64,9 @@ $accent-color-hover: rgb(51, 0, 255);
 .btn-outline-accent {
   border-color: $accent-color;
   border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
@@ -260,11 +263,16 @@ $accent-color-hover: rgb(51, 0, 255);
 
 .ourMission {
   font-weight: 600;
-  background: -webkit-linear-gradient(
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  -moz-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+
+  background: linear-gradient(
     45deg,
-    var(--bg-ourmission-1) 0%,
-    var(--bg-ourmission-2) 100%
+    var(--bg-ourmission-1),
+    var(--bg-ourmission-2)
   );
+  background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -286,6 +294,11 @@ $accent-color-hover: rgb(51, 0, 255);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.5rem;
+
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  -moz-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%;
 }
 
 .teamHeading {
@@ -299,6 +312,10 @@ $accent-color-hover: rgb(51, 0, 255);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.5rem;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  -moz-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%;
 }
 
 .ongoingProjects {
@@ -313,6 +330,10 @@ $accent-color-hover: rgb(51, 0, 255);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.5rem;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  -moz-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%;
 }
 
 .completedProjects {
@@ -327,6 +348,10 @@ $accent-color-hover: rgb(51, 0, 255);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.5rem;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  -moz-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%;
 }
 
 .contactUs {
@@ -341,6 +366,10 @@ $accent-color-hover: rgb(51, 0, 255);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.5rem;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  -moz-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%;
 }
 
 .qoe {
@@ -355,6 +384,10 @@ $accent-color-hover: rgb(51, 0, 255);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   // font-size: 2.5rem;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  -moz-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%;
 }
 
 .okemos {
@@ -368,6 +401,22 @@ $accent-color-hover: rgb(51, 0, 255);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  -moz-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%;
+}
+
+@keyframes textGradientAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .address {
@@ -415,6 +464,10 @@ hover-shadow-6:hover {
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+      -moz-animation: textGradientAnim 15s ease-in-out infinite;
+      animation: textGradientAnim 15s ease-in-out infinite;
+      background-size: 200%;
     }
   }
   p {
@@ -532,6 +585,10 @@ section {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 500;
+      -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+      -moz-animation: textGradientAnim 15s ease-in-out infinite;
+      animation: textGradientAnim 15s ease-in-out infinite;
+      background-size: 200%;
     }
     p {
       color: rgba($color: var(--bg-white), $alpha: 0.5);
@@ -553,6 +610,10 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
+    -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+    -moz-animation: textGradientAnim 15s ease-in-out infinite;
+    animation: textGradientAnim 15s ease-in-out infinite;
+    background-size: 200%;
   }
   p {
     color: rgba($color: var(--bg-white), $alpha: 0.5);
