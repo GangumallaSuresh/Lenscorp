@@ -12935,6 +12935,52 @@ a.pswp__share--download:hover {
 .pswp--minimal--dark .pswp__top-bar {
   background: none; }
 
+.typed-cursor {
+  font-weight: 200;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+          animation: blink 0.7s infinite; }
+
+[data-type].text-primary + .typed-cursor {
+  color: #50a1ff; }
+
+[data-type].text-secondary + .typed-cursor {
+  color: #e9ecf0; }
+
+[data-type].text-success + .typed-cursor {
+  color: #3cd458; }
+
+[data-type].text-info + .typed-cursor {
+  color: #926dde; }
+
+[data-type].text-warning + .typed-cursor {
+  color: #ffba00; }
+
+[data-type].text-danger + .typed-cursor {
+  color: #ff4954; }
+
+[data-type].text-light + .typed-cursor {
+  color: #f8f9fa; }
+
+[data-type].text-dark + .typed-cursor {
+  color: #191919; }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 a {
   color: #50a1ff;
   transition: .2s linear; }
@@ -19263,6 +19309,9 @@ body {
 .btn-outline-accent {
   border-color: #4870ff;
   border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   transition: all 0.4s;
   border-color: #4870ff; }
   .btn-outline-accent span {
@@ -19409,7 +19458,10 @@ body {
 
 .ourMission {
   font-weight: 600;
-  background: -webkit-linear-gradient(45deg, var(--bg-ourmission-1) 0%, var(--bg-ourmission-2) 100%);
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background: linear-gradient(45deg, var(--bg-ourmission-1), var(--bg-ourmission-2));
+  background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -19424,7 +19476,10 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%; }
 
 .teamHeading {
   font-weight: 600;
@@ -19432,7 +19487,10 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%; }
 
 .ongoingProjects {
   font-weight: 600;
@@ -19440,7 +19498,10 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%; }
 
 .completedProjects {
   font-weight: 600;
@@ -19448,7 +19509,10 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%; }
 
 .contactUs {
   font-weight: 600;
@@ -19456,21 +19520,46 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%; }
 
 .qoe {
   font-weight: 600;
   background: -webkit-linear-gradient(45deg, var(--bg-ourmission-1) 0%, var(--bg-ourmission-2) 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%; }
 
 .okemos {
   font-weight: 600;
   background: -webkit-linear-gradient(315deg, var(--bg-okemos-1) 0%, var(--bg-okemos-2) 74%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+  animation: textGradientAnim 15s ease-in-out infinite;
+  background-size: 200%; }
+
+@-webkit-keyframes textGradientAnim {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes textGradientAnim {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
 
 .address p {
   color: var(--bg-address); }
@@ -19500,7 +19589,10 @@ hover-shadow-6:hover {
     background: -webkit-linear-gradient(315deg, var(--bg-small-1) 0%, var(--bg-small-2) 74%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+    animation: textGradientAnim 15s ease-in-out infinite;
+    background-size: 200%; }
 
 .team-2 p {
   color: var(--bg-team-details); }
@@ -19588,7 +19680,10 @@ section {
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-weight: 500; }
+      font-weight: 500;
+      -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+      animation: textGradientAnim 15s ease-in-out infinite;
+      background-size: 200%; }
     .px-44 .card p {
       color: rgba(var(--bg-white), 0.5); }
 
@@ -19600,7 +19695,10 @@ section {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 500; }
+    font-weight: 500;
+    -webkit-animation: textGradientAnim 15s ease-in-out infinite;
+    animation: textGradientAnim 15s ease-in-out infinite;
+    background-size: 200%; }
   .card p {
     color: rgba(var(--bg-white), 0.5); }
 
