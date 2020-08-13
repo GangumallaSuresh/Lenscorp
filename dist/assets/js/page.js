@@ -32900,6 +32900,9 @@ $(function() {
 
 $(function () {
   var t = localStorage.getItem("theme") || 0;
+  if (t == 0) {
+    popupshow();
+  }
   themeSwitcher();
   $(".theme-switcher").click(function () {
     if (t == 1) {
@@ -32914,16 +32917,20 @@ $(function () {
   console.clear();
   console.log(t);
 
-  var myVar;
+  var show, hide;
 
   function popupshow() {
-    myVar = setTimeout(() => {
+    show = setTimeout(() => {
       $(".custom-popup").addClass("show");
-    }, 5000);
+    }, 1500);
+    hide = setTimeout(() => {
+      $(".custom-popup").removeClass("show");
+    }, 6500);
   }
 
   function popuphide() {
-    clearTimeout(myVar);
+    clearTimeout(show);
+    clearTimeout(hide);
   }
 
   function themeSwitcher() {
@@ -33020,7 +33027,7 @@ $(function () {
         "url(assets/img/portall.webp)"
       );
       $(".scroll").attr("src", "assets/img/scrolll.gif");
-      popupshow();
+      // popupshow();
       t = 0;
       localStorage.setItem("theme", 0);
       console.log(t);
