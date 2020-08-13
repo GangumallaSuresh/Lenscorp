@@ -241,6 +241,7 @@ $accent-color-hover: rgb(51, 0, 255);
     line-height: 1.5;
   }
   color: var(--bg-white) !important;
+  white-space: pre-line;
 }
 
 .endScroll {
@@ -253,6 +254,10 @@ $accent-color-hover: rgb(51, 0, 255);
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  h1 {
+    word-wrap: break-word !important;
+  }
 }
 
 .illustration-container {
