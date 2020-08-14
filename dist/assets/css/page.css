@@ -12935,52 +12935,6 @@ a.pswp__share--download:hover {
 .pswp--minimal--dark .pswp__top-bar {
   background: none; }
 
-.typed-cursor {
-  font-weight: 200;
-  opacity: 1;
-  -webkit-animation: blink 0.7s infinite;
-          animation: blink 0.7s infinite; }
-
-[data-type].text-primary + .typed-cursor {
-  color: #50a1ff; }
-
-[data-type].text-secondary + .typed-cursor {
-  color: #e9ecf0; }
-
-[data-type].text-success + .typed-cursor {
-  color: #3cd458; }
-
-[data-type].text-info + .typed-cursor {
-  color: #926dde; }
-
-[data-type].text-warning + .typed-cursor {
-  color: #ffba00; }
-
-[data-type].text-danger + .typed-cursor {
-  color: #ff4954; }
-
-[data-type].text-light + .typed-cursor {
-  color: #f8f9fa; }
-
-[data-type].text-dark + .typed-cursor {
-  color: #191919; }
-
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 a {
   color: #50a1ff;
   transition: .2s linear; }
