@@ -27276,33 +27276,34 @@ return ImagesLoaded;
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
 /**
  * Load required plugin.
  */
 __webpack_require__(20);
 
-
 /**
  * Configure the plugin.
  */
 
-+function($){
-  page.registerVendor('Slick');
++(function ($) {
+  page.registerVendor("Slick");
 
-  page.initSlick = function() {
-
-    $('[data-provide~="slider"]').each(function() {
+  page.initSlick = function () {
+    $('[data-provide~="slider"]').each(function () {
       var tag = $(this),
-          options = {
-            speed: 1000,
-            arrows: false,
-            centerPadding: '0',
-          };
+        options = {
+          speed: 1000,
+          arrows: false,
+          centerPadding: "0",
+          adaptiveHeight: true,
+        };
 
-      options = $.extend( options, page.getDataOptions(tag));
+      options = $.extend(options, page.getDataOptions(tag));
 
-      if (options.slidesToShow !== undefined || options.centerMode !== undefined) {
+      if (
+        options.slidesToShow !== undefined ||
+        options.centerMode !== undefined
+      ) {
         var scrollOn768 = 1;
         if (options.slidesToScroll !== undefined) {
           if (options.slidesToScroll > 1) {
@@ -27310,32 +27311,29 @@ __webpack_require__(20);
           }
         }
 
-        options.responsive = [{
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: scrollOn768,
-          }
-        },
-        {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerPadding: '0px',
-          }
-        }];
+        options.responsive = [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: scrollOn768,
+            },
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              centerPadding: "0px",
+            },
+          },
+        ];
       }
 
       tag.slick(options);
     });
-
-  }
-
-}(jQuery);
-
-
-
+  };
+})(jQuery);
 
 
 /***/ }),
